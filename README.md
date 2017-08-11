@@ -113,3 +113,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 | 2.2      | Convert to Gitbook                                                                                                                                | June 2017  |
 |          | [#425](https://bugzilla.tianocore.org/show_bug.cgi?id=425) [CCS] clarify line breaking and indentation requirements for multi-line function calls |            |
 |          | Limit lines to 80 columns                                                                                                                         |            |
+|          | Introduce the "condensed arguments" line breaking style                                                                                           |            |

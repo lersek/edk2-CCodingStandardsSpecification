@@ -133,7 +133,9 @@ If ((--MyInteger) > 0) {
 #### 5.2.2.4 Subsequent lines of multi-line function calls should line up two spaces from the beginning of the function name
 
 If a function call or function like macro invocation is broken up into multiple
-lines, then:
+lines, then follow one of the alternatives below.
+
+##### 5.2.2.4.1 The "one argument per line" style
 
 * One argument per line, including the first argument on its own line.
 * Indent each argument 2 spaces from the start of the function name. If a
@@ -164,6 +166,31 @@ DEBUG ((
   Buffer4
   ));
 ```
+
+Use this line breaking style especially if it saves a format string or complex
+argument from being split, or when commenting on individual arguments.
+
+##### 5.2.2.4.2 The "condensed arguments" style
+
+For most function calls and function-like macro invocations, the "one argument
+per line" style uses up valuable vertical space without utilizing readily
+available horizontal space. Such statements are permitted to condense the
+arguments and the closing parenthesis (or parentheses), up to the allowed line
+length. The indentation requirements are identical to those of the "one
+argument per line" style.
+
+```c
+CopyMem (Destination, Source, SIZE_4KB);
+
+Status = gBS->AllocatePool (EfiBootServicesData, sizeof (DRIVER_NAME_INSTANCE),
+                &PrivateData);
+
+DEBUG ((DEBUG_INFO, "The addresses of the 4 buffers are %p, %p, %p, and %p\n",
+  Buffer1, Buffer2, Buffer3, Buffer4));
+```
+
+This line breaking style prevents overly frequent saccades to the left, without
+resulting in overlong lines.
 
 #### 5.2.2.5 Always put space after commas or semicolons that separate items
 
