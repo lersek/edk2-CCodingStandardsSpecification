@@ -33,12 +33,19 @@
 
 ## 5.1 General Rules
 
-### 5.1.1 Lines shall be 120 columns, or less
+### 5.1.1 Lines shall be 80 columns, or less
 
-Preferably, limit line lengths to 80 columns or less. When this doesn't leave
-sufficient space for a good postfix style comment, extend the line to a total
-of 120 columns. Having some level of uniformity in the expected width of the
-source is useful for viewing and printing the code.
+Limit line lengths to 80 columns.
+
+Lines longer than 80 columns make it more difficult for the reader to find the
+beginning of the next line. They also tend to prevent users from displaying two
+source listings side-by-side on common display devices.
+
+When the 80 columns limit doesn't leave sufficient space for a postfix style
+comment, break the line into shorter segments at logical boundaries (for
+example, between the arguments of a function call, adhering to the spacing
+rules), or replace the postfix style comment with a standalone comment that
+precedes the statement.
 
 ### 5.1.2 Do not use tab characters
 
